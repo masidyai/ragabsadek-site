@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.ragabsadek.com" }],
+      "destination": "https://ragabsadek.com/$1",
+      "permanent": true
+    }
+  ]
+}

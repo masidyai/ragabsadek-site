@@ -1,0 +1,20 @@
+# Redirect www -> non-www (keeps one address for Google)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://ragabsadek.com%{REQUEST_URI} [L,R=301]
+
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/manifest+json application/xml
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 week"
+ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
