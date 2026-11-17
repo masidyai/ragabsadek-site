@@ -1,2 +1,1 @@
-# Netlify: www -> non-www
-https://www.ragabsadek.com/* https://ragabsadek.com/:splat 301!
+# Redirects handled via Cloudflare dashboard
